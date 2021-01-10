@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR_WIN
+using UnityEditor;
 using UnityEngine;
 using Microsoft.Win32;
 using System.IO;
@@ -55,3 +56,4 @@ public class UnityGitBashHere
         System.Diagnostics.Process.Start(gitBash, string.Format("--cd=\"{0}\"", path));
     }
 }
+#endif

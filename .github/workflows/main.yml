@@ -23,7 +23,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Create unitypackage
-        run: UnityPacker Assets UnityGitBashHere
+        run: .\UnityPacker Assets UnityGitBashHere
       
       - uses: actions/upload-artifact@v2
         with:

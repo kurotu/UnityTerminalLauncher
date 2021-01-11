@@ -18,6 +18,7 @@ jobs:
 
       - name: Download UnityPacker
         run: |
+          cd $GITHUB_WORKSPACE
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/UnityPacker.exe -OutFile UnityPacker.exe
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/ICSharpCode.SharpZipLib.dll -OutFile ICSharpCode.SharpZipLib.dll
 

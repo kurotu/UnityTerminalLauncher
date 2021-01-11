@@ -16,16 +16,11 @@ jobs:
         with:
           path: Assets/KRT/UnityGitBashHere
 
-      - name: Download UnityPacker
+      - name: Build with UnityPacker
         run: |
           cd $GITHUB_WORKSPACE
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/UnityPacker.exe -OutFile UnityPacker.exe
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/ICSharpCode.SharpZipLib.dll -OutFile ICSharpCode.SharpZipLib.dll
-
-      # Runs a set of commands using the runners shell
-      - name: Create unitypackage
-        run: |
-          cd $GITHUB_WORKSPACE
           .\UnityPacker Assets UnityGitBashHere
       
       - uses: actions/upload-artifact@v2

@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: Assets/KRT/UnityGitBashHere
+          path: Assets\KRT\UnityGitBashHere
 
       - name: Build with UnityPacker
         run: |

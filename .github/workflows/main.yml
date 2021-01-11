@@ -18,13 +18,9 @@ jobs:
 
       - name: Build with UnityPacker
         run: |
-          Get-Location
-          ls
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/UnityPacker.exe -OutFile UnityPacker.exe
           Invoke-WebRequest -Uri https://github.com/FatihBAKIR/UnityPacker/releases/download/0.0.1/ICSharpCode.SharpZipLib.dll -OutFile ICSharpCode.SharpZipLib.dll
-          .\UnityPacker Assets UnityGitBashHere
-          Get-Location
-          ls
+          .\UnityPacker Assets/KRT UnityGitBashHere
       
       - uses: actions/upload-artifact@v2
         with:

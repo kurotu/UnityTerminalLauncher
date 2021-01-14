@@ -1,4 +1,5 @@
-﻿#if UNITY_EDITOR_WIN
+﻿// v1.0.0
+#if UNITY_EDITOR_WIN
 using UnityEditor;
 using UnityEngine;
 using Microsoft.Win32;

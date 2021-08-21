@@ -4,7 +4,7 @@ namespace KRT.UnityTerminalLauncher
 {
     class CmdLauncher : TerminalLauncher
     {
-        internal override bool HasExecutable => true;
+        internal override bool HasExecutable => ExistsOnPath("cmd.exe");
 
         internal override Process Launch(string targetFolder)
         {

@@ -4,7 +4,7 @@ namespace KRT.UnityTerminalLauncher
 {
     class PowerShellLauncher : TerminalLauncher
     {
-        internal override bool HasExecutable => true;
+        internal override bool HasExecutable => ExistsOnPath("PowerShell.exe");
 
         internal override Process Launch(string targetFolder)
         {

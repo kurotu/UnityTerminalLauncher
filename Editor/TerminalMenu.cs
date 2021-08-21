@@ -48,9 +48,15 @@ namespace KRT.UnityTerminalLauncher
                         var launcher = CreateLauncher(t);
                         if (launcher.HasExecutable) { return launcher; }
                     }
-                    return null;
+                    throw new System.Exception("Suitable terminal not found in system.");
                 case TerminalType.WindowsTerminal:
                     return new WindowsTerminalLauncher();
+                case TerminalType.PowerShellCore:
+                    return new PowerShellCoreLauncher();
+                case TerminalType.PowerShell:
+                    return new PowerShellLauncher();
+                case TerminalType.Cmd:
+                    return new CmdLauncher();
                 case TerminalType.GitBash:
                     return new GitBashLauncher();
                 default:

@@ -1,11 +1,19 @@
 # UnityGitBashHere
 
-UnityのプロジェクトフォルダのコンテキストメニューからGit Bashを起動するEditor拡張です。
+Unityのプロジェクトフォルダのコンテキストメニューからターミナルを起動するEditor拡張です。
+
+以下のターミナルの起動をサポートしています。
+
+・Windows Terminal
+・PowerShell Core
+・PowerShell
+・コマンドプロンプト
+・Git Bash
 
 ## 使用方法
 
 1. unitypackageを導入後、UnityのProjectウィンドウでフォルダを右クリックします。
-2. コンテキストメニューから「Git Bash Here」を選択すると、選択したフォルダでGit Bashが起動します。
+2. コンテキストメニューから「Open Terminal Here」を選択すると、選択したフォルダでターミナルが起動します。
 
 ## 対応OS・動作確認環境
 

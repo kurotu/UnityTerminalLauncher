@@ -1,4 +1,4 @@
-# UnityGitBashHere
+# UnityTerminalLauncher
 
 Unityのプロジェクトフォルダのコンテキストメニューからターミナルを起動するEditor拡張です。
 
@@ -15,6 +15,8 @@ Unityのプロジェクトフォルダのコンテキストメニューからタ
 1. unitypackageを導入後、UnityのProjectウィンドウでフォルダを右クリックします。
 2. コンテキストメニューから「Open Terminal Here」を選択すると、選択したフォルダでターミナルが起動します。
 
+Edit -> Preferences... メニュー内の Terminal Launcher の項目で起動するターミナルを変更できます。
+
 ## 対応OS・動作確認環境
 
 ・Windows 10 64-bit
@@ -30,6 +32,10 @@ Unityのプロジェクトフォルダのコンテキストメニューからタ
 Twitter: https://twitter.com/kurotu
 
 ## 更新履歴
+
+・2021/8/21: v2.0.0
+　　・UnityGitBashHereから名称変更
+　　・Windows Terminal, PowerShell, コマンドプロンプトに対応
 
 ・2021/1/14: v1.0.0
 　　・公開

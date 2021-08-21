@@ -11,7 +11,7 @@ namespace KRT.UnityTerminalLauncher
         {
             var path = GetSelectedPathOrFallback();
             var cd = Path.Combine(GetProjectPath(), path).Replace('/', '\\');
-            var launcher = CreateLauncher();
+            var launcher = CreateLauncher(TerminalSettings.TerminalType);
             launcher.Launch(cd);
         }
 
@@ -37,9 +37,25 @@ namespace KRT.UnityTerminalLauncher
             return path;
         }
 
-        private static TerminalLauncher CreateLauncher()
+        private static TerminalLauncher CreateLauncher(TerminalType terminalType)
         {
-            return new WindowsTerminalLauncher();
+            switch (terminalType)
+            {
+                case TerminalType.Auto:
+                    foreach (TerminalType t in System.Enum.GetValues(typeof(TerminalType)))
+                    {
+                        if (t == TerminalType.Auto) { continue; }
+                        var launcher = CreateLauncher(t);
+                        if (launcher.HasExecutable) { return launcher; }
+                    }
+                    return null;
+                case TerminalType.WindowsTerminal:
+                    return new WindowsTerminalLauncher();
+                case TerminalType.GitBash:
+                    return new GitBashLauncher();
+                default:
+                    throw new System.NotImplementedException($"Launcher for {terminalType} is not implemented.");
+            }
         }
     }
 }

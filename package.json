@@ -1,0 +1,14 @@
+{
+  "name": "com.github.kurotu.unity-terminal-launcher",
+  "displayName": "Unity Terminal Launcher",
+  "version": "2.0.0",
+  "description": "Add \"Open Terminal Here\" context menu for Unity",
+  "dependencies": {},
+  "gitDependencies": {},
+  "vpmDependencies": {},
+  "legacyFolders": {
+    "Assets\\KRT\\UnityGitBashHere": "3280331aad3732d4eb7f57e185c92cb5",
+    "Assets\\KRT\\UnityTerminalLauncher": "3280331aad3732d4eb7f57e185c92cb5"
+  },
+  "legacyFiles": {}
+}

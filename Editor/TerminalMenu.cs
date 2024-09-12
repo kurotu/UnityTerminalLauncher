@@ -10,15 +10,18 @@ namespace KRT.UnityTerminalLauncher
         private static void OpenTerminalHere()
         {
             var path = GetSelectedPathOrFallback();
-            var cd = Path.Combine(GetProjectPath(), path).Replace('/', '\\');
-            var launcher = CreateLauncher(TerminalSettings.TerminalType);
-            launcher.Launch(cd);
+            OpenTerminal(path);
         }
 
         [MenuItem("Window/External Terminal")]
         private static void OpenTerminalInProjectRoot()
         {
-            var cd = Path.Combine(GetProjectPath(), ".").Replace('/', '\\');
+            OpenTerminal(".");
+        }
+
+        private static void OpenTerminal(string path)
+        {
+            var cd = Path.Combine(GetProjectPath(), path).Replace('/', '\\');
             var launcher = CreateLauncher(TerminalSettings.TerminalType);
             launcher.Launch(cd);
         }

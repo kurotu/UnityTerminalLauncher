@@ -15,6 +15,14 @@ namespace KRT.UnityTerminalLauncher
             launcher.Launch(cd);
         }
 
+        [MenuItem("Window/External Terminal")]
+        private static void OpenTerminalInProjectRoot()
+        {
+            var cd = Path.Combine(GetProjectPath(), ".").Replace('/', '\\');
+            var launcher = CreateLauncher(TerminalSettings.TerminalType);
+            launcher.Launch(cd);
+        }
+
         private static string GetProjectPath()
         {
             var assetsPath = Application.dataPath;

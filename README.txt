@@ -38,6 +38,11 @@ Twitter: https://twitter.com/kurotu
 
 ## 更新履歴
 
+・2024/9/13: v2.1.0
+　　・asmdefを追加
+　　・UPMに対応
+　　・Window/External Terminal メニューを追加
+
 ・2021/8/21: v2.0.0
 　　・UnityGitBashHereから名称変更
 　　・Windows Terminal, PowerShell, コマンドプロンプトに対応

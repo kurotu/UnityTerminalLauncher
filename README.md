@@ -11,7 +11,14 @@ A terminal starts in a folder which you selected.
 - Git Bash
 
 ## Installation
+
+### Unitypackage
 Download .unitypackage from the release page then import it.
+
+### OpenUPM
+```sh
+openupm add com.github.kurotu.unity-terminal-launcher
+```
 
 ## Usage
 
